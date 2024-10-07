@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Movie App</title>
+</head>
+
+<body>
+    <div class="section">
+        <div class="row d-flex justify-content-between position-relative">
+            <div class="contain d-flex">
+                <aside class="aside d-flex flex-column justify-content-between align-items-center position-fixed py-3">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="logo">
+                    </div>
+                    <i class=" fa-solid fa-xmark d-none"></i>
+                    <i class="fa-solid fa-bars "></i>
+                    <div class="icons d-flex flex-column">
+                        <i class="fa-solid fa-globe"></i>
+                        <i class="fa-solid fa-share-nodes my-2"></i>
+                    </div>
+
+                </aside>
+
+                <div class="menuList d-none bg-dark d-flex flex-column justify-content-between py-5 position-fixed">
+                    <ul class="links list-unstyled text-white px-4">
+                        <li class="menuListLi nowPlaying text-decoration-none text-white  animate__fadeInUp"
+                            data-type="now_playing" href="">Now playing</a></li>
+                        <li class="menuListLi popular text-decoration-none text-white" data-type="popular">Popular</li>
+                        <li class="menuListLi topRated text-decoration-none text-white" data-type="top_rated">Top Rated
+                        </li>
+                        <li class="menuListLi trending text-decoration-none text-white" data-type="trending">Trending
+                        </li>
+                        <li class="menuListLi upComung text-decoration-none text-white" data-type="upcoming">Upcoming
+                        </li>
+                        <li><a class="menuListLi contactUS text-decoration-none text-white" href="#contact">Contact
+                                us</a></li>
+                    </ul>
+
+                    <div>
+                        <ul class="social d-flex text-white">
+                            <i class="fa-brands fa-facebook mx-2"></i>
+                            <i class="fa-brands fa-twitter  mx-2"></i>
+                            <i class="fa-solid fa-globe  mx-2"></i>
+
+                        </ul>
+
+                        <p class="text-muted mx-2 ">Copyright Â© 2022 All Rights
+                            Reserved.</p>
+                        <p class="text-muted owner mx-2">Created by <a href="https://github.com/Develekko"
+                                target="_blank" class="text-danger fw-bold text-decoration-none">
+                                Housam
+                                Ramdan</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content bg-dark">
+
+                <input type="search" class=" text-muted searchInput " placeholder="search">
+
+
+                <div class="container">
+                    <div class="products-container row d-flex justify-content-between gx-4 gy-4 flex-wrap mt-3">
+
+
+                    </div>
+                </div>
+
+
+
+                <!-- <article class="col-md-4">
+            <img src="" alt="">
+            <div class="overlay">
+                <h2></h2>
+                <p></p>
+                <div class="rating"></div>
+                <div class="score"></div>
+            </div>
+
+        </article> -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="loading">
+        <span class="loader"></span>
+    </div>
+
+    <!-- Contact section -->
+
+
+
+    <footer class="footer my-5 position-relative" id="contact">
+
+        <form class="container ">
+            <div class=" mt-2 g-3 d-flex justify-content-between gap-4">
+
+                <div class="first-part col-md-6 ">
+                    <div class="mb-3">
+                        <input type="text" class="form-control text-center nameInput" id="exampleFormControlInput1"
+                            placeholder="Enter Your Name" oninput="validate(this,nameRegex)">
+                        <div class="error-msg d-none text-danger">
+                            Name should start with capital letter at followed by at least 3 characters
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="tel" class="form-control text-center telInput" id="exampleFormControlInput2"
+                            placeholder="Enter Your Phone " oninput="validate(telInput,telRegex)">
+
+                        <div class="error-msg d-none text-danger">
+                            Telephone number should start with (01)[0125] followed by 8 numbers
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="password" class="form-control text-center passInput" id="exampleFormControlInput3"
+                            placeholder="Enter Your Password" oninput="validate(passInput,passRegex)">
+
+                        <div class="error-msg d-none text-danger">
+                            Password shouldcontain at least Capital letter, special character ,number and not less than
+                            8
+                            characters
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sec-part col-md-6">
+
+                    <div class="mb-3">
+                        <input type="email" class="form-control text-center" id="exampleFormControlInput4"
+                            placeholder="Enter Your Email" oninput="validate(emailInput,emailRegex)">
+
+                        <div class="error-msg d-none text-danger emailInput">
+                            Email should contain at least Capital letter, @ ,number and not less than 8 characters
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="number" class="form-control text-center ageInput" id="exampleFormControlInput5"
+                            placeholder="Enter Your Age" oninput="validate(ageInput,ageRegex)">
+                        <div class="error-msg d-none text-danger">
+                            Number should contain numbers only
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="password" class="form-control text-center repassInput"
+                            id="exampleFormControlInput6" placeholder="renter Your Password"
+                            oninput="validate(repassInput,repassRegex)">
+
+                        <div class="error-msg d-none text-danger">
+                            Password should contain at least Capital letter, special character ,number and not less than
+                            8
+                            characters and should be similar than the written password
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <button type="submit" class="btn ">submit</button>
+
+        </form>
+
+        <i class="fa-solid fa-arrow-up text-white position-absolute "></i>
+
+    </footer>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
